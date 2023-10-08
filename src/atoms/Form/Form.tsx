@@ -14,7 +14,7 @@ const Form = ({ formData }: Props) => {
     amount: "",
   };
 
-  const [formInfo, setFormInfo] = useState(defaultFormInfo);
+  const [formInfo, setFormInfo] = useState<INewLog>(defaultFormInfo);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
