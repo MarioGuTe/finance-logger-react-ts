@@ -1,3 +1,4 @@
+import React from "react";
 import ListItem from "../ListItem/ListItem";
 import { INewLog } from "../../interfaces/INewLog";
 
@@ -11,9 +12,9 @@ const List = ({ logInfo, onItemClick }: Props) => {
     <>
       <ul className="item-list">
         {logInfo.map((singleLog) => (
-          <span key={singleLog.id}>
+          <React.Fragment key={singleLog.id}>
             <ListItem singleLog={singleLog} onItemClick={onItemClick} />
-          </span>
+          </React.Fragment>
         ))}
       </ul>
     </>
